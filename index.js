@@ -152,9 +152,32 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+let computer = Math.floor(Math.random() * 3);
+
+if (computer === 0) {
+  computer = 'rock';
+} else if (computer === 1) {
+  computer = 'paper';
+} else if (computer === 2) {
+  computer = 'scissors';
 }
+
+function game(user, computer){
+  
+  if (user === computer) {
+  return "it's a tie";
+  } else if (user === 'rock' && computer === 'scissors') {
+    return "you win!";
+  } else if (user === 'paper' && computer === 'rock') {
+    return "you win!";
+  } else if (user === 'scissors' && computer === 'paper') {
+    return "you win!";
+  } else {
+    return "you lose!";
+  }
+}
+console.log(computer);
+console.log(game('rock', computer));
 
 
 
@@ -169,7 +192,7 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilometers){
   /*add your code here*/
 }
 
