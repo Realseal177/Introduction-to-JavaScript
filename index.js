@@ -192,9 +192,13 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
+let total = 0.621371
+
 function miles(kilometers){
-  /*add your code here*/
+  return total * kilometers; 
 }
+
+console.log(miles(20));
 
 
 
