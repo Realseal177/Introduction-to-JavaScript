@@ -209,12 +209,13 @@ Using the feet function below do the following:
 2. Convert the number of cm to feet
 3. Return number of feet
 */
+let totalFeet = 30.48
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(centimeters){
+  return centimeters / totalFeet;
 }
 
-
+console.log(feet(100));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -226,10 +227,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here - return inside the for loop*/){
-      /*add your code here*/
+function annoyingSong(sodaBottles){
+  for (let i = sodaBottles; i >= 0 ; i--) {
+  return `${sodaBottles} bottles of soda on the wall, ${sodaBottles} bottles of soda, take one down pass it around ${sodaBottles - 1} bottles of soda on the wall`;
+  }
 }
 
+console.log(annoyingSong(20));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -246,11 +250,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+  if (score > 89 && score < 101) {
+    return 'you got an A';
+  } else if (score > 79 && score < 90) {
+    return 'you got a B';
+  } else if (score > 69 && score < 80) {
+    return 'you got a C';
+  } else if (score > 59 && score < 70) {
+    return 'you got a D';
+  } else if (score < 60) {
+    return 'you got an F';
+  }
 }
 
-
+console.log(grade(99));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
